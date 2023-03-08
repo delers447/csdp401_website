@@ -5,8 +5,8 @@ print("Connecting to Database.")
 conn = psycopg2.connect(
                     host = "localhost",
                     database = "twotter_db",
-                    user = "dan",
-                    password = "Woodland7!")
+                    user = "user",
+                    password = "password")
 print("SUCCESS! Connected to Database.")
 
 cur = conn.cursor()
