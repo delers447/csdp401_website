@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+
+{% extends 'base.html'%}
+{% block content%}
+  <body>
+  <h2>Welcome to Twotter</h2>
+  <p>Twotter is a Machine Learning window displaying pairs of tweets that are similar.</p>
+  <div class="rows">
+    <div class="column" style="background-color:lightskyblue">
+      <h3>Here are some tweets.</h3>
+      {% for tweet, data in tweet_dictionary.items() %}
+        <p><b>{{ tweet | capitalize}}</b><br>
+        {{ data["user"] }} : @{{ data["username"] }} : {{ data["date"] }} <br>
+        {{ data["content"] | safe }}</p>
+      {% endfor %}
+    </div>
+    <div class="column" style="background-color:PaleTurquoise">
+      <h3>Here are some other tweets. </h3>
+      {% for tweet, data in other_tweet_dictionary.items() %}
+        <p><b>{{ tweet | capitalize }}</b><br>
+        {{ data["user"] }} : @{{ data["username"] }} : {{ data["date"] }} <br>
+        {{ data["content"] }}</p>
+      {% endfor %}
+    </div>
+  </div>
+  </body>
+  </html>
+{% endblock%}
