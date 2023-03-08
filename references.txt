@@ -1,0 +1,13 @@
+
+PowerShell Command: 
+docker run -p 5432:5432 --name twotter-db -e POSTGRES_PASSWORD=password -e POSTGRES_USER=user -d postgres
+docker run -p 5555:80 --name pgadmin -e PGADMIN_DEFAULT_EMAIL="user@umes.edu" -e PGADMIN_DEFAULT_PASSWORD="password" dpage/pgadmin4 
+docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' twotter-db
+
+Sources:  
+https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_two_columns
+https://docs.docker.com/engine/reference/commandline/run/
+https://hub.docker.com/_/postgres/
+Setting up posgress and pgadmin:  https://www.youtube.com/watch?v=3v5VLS-oWKs
+Using Python module psycopg2: https://www.youtube.com/watch?v=2PDkXviEMD0&t=626s
+
