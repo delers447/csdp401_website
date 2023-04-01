@@ -28,7 +28,7 @@ create_tweet_table = """
         TweetID serial,
         UserId int REFERENCES Users(UserID),
         DateOfTweet TIMESTAMPTZ,
-        Content varchar(255),
+        Content varchar(512),
         PRIMARY KEY (TweetID)
     );
 """
