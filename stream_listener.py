@@ -18,8 +18,8 @@ class My_listener(tweepy.Stream):
         self.conn = psycopg2.connect(
                             host = "localhost",
                             database = "twotter_db",
-                            user = "dan",
-                            password = "Woodland7!")
+                            user = "user",
+                            password = "password")
         self.cursor = self.conn.cursor()
 
         if status.text.find("RT") == -1 and status.lang=='en':# and status.in_reply_to_status_id:
